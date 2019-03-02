@@ -1,6 +1,8 @@
 <template>
     <div>
-        <div>hello,<span class="user">{{username}}</span> let's add contact</div>
+        <div>hello,<span class="user">{{username}}</span> let's add contact<span class="badge badge-pill badge-primary">I am badge from bootstrap</span></div>
+
+
         <form>
             <label>Person name and Surname <input type="text" v-model="fio"
                                                   placeholder="name surname"></label>
