@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c0a75"],{4366:function(t,n,c){"use strict";c.r(n);var a=function(){var t=this,n=t.$createElement,c=t._self._c||n;return c("div",{staticClass:"AddContact"},[c("div",[t._v("add contact under construction")]),c("AddContact"),c("Contacts")],1)},d=[],o=c("8fd0"),e=c("63d8"),s={name:"addcontact",components:{AddContact:o["a"],Contacts:e["a"]}},u=s,i=c("2877"),l=Object(i["a"])(u,a,d,!1,null,null,null);n["default"]=l.exports}}]);
+//# sourceMappingURL=chunk-2d0c0a75.eb90c3cc.js.map
