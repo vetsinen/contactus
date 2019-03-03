@@ -3,12 +3,12 @@
 </template>
 
 <script>
-    import Contacts from "@/components/Contacts.vue";
+    import Actions from "@/components/Actions.vue";
 
     export default {
-        name: "contacts",
+        name: "actions",
         components: {
-            Contacts,
+            Actions,
         }
     };
 </script>
