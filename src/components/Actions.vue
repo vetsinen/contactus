@@ -38,13 +38,21 @@
         data: function () {
             return {
                 actions: [
-                    {type: "meetAtPub",date:"May 15, 2019",fio:"Jack Burns"},
-                    {type: "meetAtPub",date:"June 15, 2019",fio:"Buddy Porns"},
-                    {type: "sendSms",date:"March 15, 2019",fio:"Larry Unicorns"},
+                    {type: "meetAtPub", date: "May 15, 2019", fio: "Serhiy Ruban"},
+                    {type: "meetAtPub", date: "June 15, 2019", fio: "Roman Suhan"},
+                    {type: "sendSms", date: "March 15, 2019", fio: "Manuk Nabru"},
                 ]
 
             }
-        }
+        },
+        mounted() {
+            if (localStorage.actions) {
+                this.actions = JSON.parse(localStorage.actions);
+            }
+            else {
+                localStorage.actions = JSON.stringify(this.actions);
+            }
+        },
     };
 </script>
 

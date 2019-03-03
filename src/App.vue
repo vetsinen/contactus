@@ -24,31 +24,16 @@
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" to="/addcontact">
-                                <i class="menu-icon mdi mdi-television"></i>
-                                <span class="menu-title">Add contact</span>
-                            </router-link>
-                        </li>
-                        <li class="nav-item">
-                            <router-link class="nav-link" to="contacts">
+                            <router-link class="nav-link" to="/contacts">
                                 <i class="menu-icon mdi mdi-television"></i>
                                 <span class="menu-title">Contacts</span>
                             </router-link>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" to="addaction">
+                            <router-link class="nav-link" to="actions">
                                 <i class="menu-icon mdi mdi-television"></i>
-                                <span class="menu-title">Add Action</span>
+                                <span class="menu-title">Actions</span>
                             </router-link>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
-                               aria-controls="ui-basic">
-                                <i class="menu-icon mdi mdi-content-copy"></i>
-                                <span class="menu-title">logout</span>
-                            </a>
-                            <div class="collapse" id="ui-basic">
-                            </div>
                         </li>
                     </ul>
                 </nav>

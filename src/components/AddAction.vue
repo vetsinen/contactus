@@ -7,7 +7,13 @@
                 <option>meetAtPub</option>
                 <option>orderAGift</option>
             </select><br/>
-            <button>I wonna this act</button>
+            <label for=""><input type="text" placeholder="date to act"></label><br/>
+            <select v-model="fio">
+                <option>Serhiy Ruban</option>
+                <option>Roman Suhan</option>
+                <option>Rodion Zadorozhniy</option>
+            </select><br/>
+            <button v-on:click="addAction">I wonna this act</button>
         </form>
     </div>
 </template>
@@ -17,7 +23,16 @@
         name: "AddAction",
         data: function () {
             return {
-               type: "meetAtPub"
+                type: "meetAtPub",
+                date: null,
+                fio: "Serhiy Ruban"
+            }
+        },
+        methods: {
+            addAction: function () {
+                let actions =JSON.parse(localStorage.actions);
+                actions.push({type:this.type,date:this.date, fio:this.fio});
+                localStorage.actions = JSON.stringify(actions);
             }
         }
     }

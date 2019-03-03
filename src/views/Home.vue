@@ -4,7 +4,6 @@
         <Actions/>
         <h3>Your contacts</h3>
         <Contacts/>
-        <AddContact/>
     </div>
 </template>
 

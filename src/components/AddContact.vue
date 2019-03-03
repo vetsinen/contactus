@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div>let's add action</div>
         <form>
             <label>Person name and Surname <input type="text" v-model="fio"
                                                   placeholder="name surname"></label>
@@ -23,10 +24,9 @@
                 </select></label>
             <br/>
 
-            <button v-on:click="add">add and see contacts</button>
-            <button v-on:click="add">add and fill action</button>
+            <button v-on:click="add">add and contact</button>
+            <!--<button v-on:click="add">add and fill action</button>-->
         </form>
-        <div>let's add action</div>
 
     </div>
 </template>
@@ -36,38 +36,26 @@
         name: "AddContact",
         data: function () {
             return {
-                username: 'Rodion',
-                contacts: [
-                    {fio: "Serhiy Ruban", phone: '021-422-6373', id:8574566464546},
-                    {fio: "Roman Suhan", phone: '021-242-6373',id:46837543653563},
-                    {fio: "Manuk Nabru", phone: '021-242-6363',id:43733457833},
-                ],
-                actions: [
-                    {type:'sendSms',date:null,result:null},
-                    {type:'meetAtPub',date:null,result:null},
-                ],
                 fio:null,
                 phone: null,
-
-                action: {
-                    type: 'sendSms',
-                    target: 123
-                }
+                contacts:[],
             }
         },
         methods: {
-            add: function () {
+            add:function () {
+                console.log('Yo');
+                console.log(this.fio);
                 this.contacts.push({fio:this.fio, phone:this.phone});
                 this.fio = null;
                 this.phone = null;
+                localStorage.contacts = JSON.stringify(this.contacts);
             }
         },
         mounted() {
-            if (localStorage.username) {
-                this.name = localStorage.username;
+            if (localStorage.contacts) {
+                this.contacts = JSON.parse(localStorage.contacts);
+                console.log(this.contacts);
             }
-            localStorage.username = this.username;
-            localStorage.contacts = JSON.stringify(this.contacts);
         },
 //        watch: {
 //            name(newName) {

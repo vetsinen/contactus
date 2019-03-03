@@ -43,9 +43,18 @@
                     {fio: "Manuk Nabru", phone: '021-242-6363', id: 43767333457833},
                 ],
             }
-        }
+        },
+        mounted() {
+            if (localStorage.contacts) {
+                this.contacts = JSON.parse(localStorage.contacts);
+            }
+            else {
+                localStorage.contacts = JSON.stringify(this.contacts);
+            }
+        },
     };
 </script>
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
