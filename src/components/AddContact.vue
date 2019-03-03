@@ -1,8 +1,5 @@
 <template>
     <div>
-        <div>hello,<span class="user">{{username}}</span> let's add contact<span class="badge badge-pill badge-primary">I am badge from bootstrap</span></div>
-
-
         <form>
             <label>Person name and Surname <input type="text" v-model="fio"
                                                   placeholder="name surname"></label>
@@ -30,21 +27,6 @@
             <button v-on:click="add">add and fill action</button>
         </form>
         <div>let's add action</div>
-        <form>
-            <select v-model="action.type">
-                <option>sendSms</option>
-                <option>meetAtPub</option>
-                <option>orderAGift</option>
-            </select><br/>
-            <button>I wonna this act</button>
-        </form>
-        <div class="actions">
-            <span v-for="el in actions">{{el.type}}<br/></span>
-        </div>
-        <hr/>
-        <div class="contacts">
-            <span v-for="el in contacts">{{el.fio}}|{{el.phone}}<br/></span>
-        </div>
 
     </div>
 </template>

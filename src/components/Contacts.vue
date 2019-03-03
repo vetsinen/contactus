@@ -1,7 +1,35 @@
 <template>
-    <div class="contacts">
-        <span v-for="el in contacts">{{el.fio}}|{{el.phone}}<br/></span>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>
+                    Name Surname
+                </th>
+                <th>
+                    mobile num
+                </th>
+                <th>
+                    Action planned?
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="el in contacts">
+                <td>
+                    {{el.fio}}
+                </td>
+                <td>
+                    ✆{{el.phone}}
+                </td>
+                <td>
+                    ✔
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+
 </template>
 
 <script>
